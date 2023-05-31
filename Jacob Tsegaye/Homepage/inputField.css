@@ -1,0 +1,67 @@
+* {
+    font-size: 62.5%;
+}
+
+.btn {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    margin: 1rem;
+    border-radius: 4.5rem;
+    background-image: none;
+    transition: all 500ms ease;
+    transition-delay: 100ms;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.btn:hover {
+    background-color: navy;
+    color: white;
+}
+
+.btn_confirm:hover {
+    background-color: green;
+    color: white;
+}
+
+.btn_cancel:hover {
+    background-color: red;
+    color: white;
+}
+
+.input_box {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border: 0.1rem solid dodgerblue;
+    box-shadow: 0rem 0rem 0.8rem dodgerblue;
+    letter-spacing: 0.15rem;
+    line-height: 2.8rem;
+    border-radius: 1rem;
+}
+
+.input_box:focus {
+    box-shadow: 0rem 0rem 1.5rem navy;
+}
+
+.generic_input {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border: 0.1rem solid dodgerblue;
+    box-shadow: 0rem 0rem 0.8rem dodgerblue;
+    letter-spacing: 0.15rem;
+    line-height: 2.5rem;
+    border-radius: 1rem;
+}
+
+.generic_input_margin {
+    margin: 0.1rem;
+    font-size: 1.8rem;
+    border: 0.1rem solid dodgerblue;
+    box-shadow: 0rem 0rem 0.8rem dodgerblue;
+    letter-spacing: 0.15rem;
+    line-height: 2.5rem;
+    border-radius: 1rem;
+}

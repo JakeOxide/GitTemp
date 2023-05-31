@@ -1,0 +1,87 @@
+.testBox {
+    margin: 2rem 2rem;
+    height: 100%;
+    border: 1rem solid red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    padding: 1rem;
+    margin:1rem;
+    border: 0.2rem solid darkblue;
+    max-width: 39rem;
+    min-width: 37rem;
+    max-height: 48rem;
+    min-height: 46rem;
+    border-radius: 5rem;
+    box-shadow: 0.5rem 0.6rem 1.5rem 0.5rem lightblue;
+    font-size: 2rem;
+}
+
+
+.card:hover {
+    border: none;
+    padding: 0rem;
+    min-width: 38rem;
+    min-height: 47rem;
+    box-shadow: 0.5rem 0.6rem 2rem 1.5rem lightblue;
+}
+
+
+.card_image {
+    min-width: 99%;
+    max-width: 99%;
+    min-height: 18.5rem;
+    max-height: 18.5rem;
+    margin: 0.1rem;
+    padding: 0rem;
+    border-top-left-radius: 4.5rem;
+    border-top-right-radius: 4.5rem;
+    position: static;
+}
+
+.ico {
+    border-radius: 1rem;
+}
+
+.infoBox {/* 
+    border: 0.1rem solid grey; */
+    max-width: 15rem;
+    min-width: 15rem;
+    min-height: 5rem;
+    max-height: 6rem;
+    margin: 1rem;
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+
+.card_desc_boxes {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card_desc_boxes .btn {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+.card_desc_boxes .btn:hover {
+    font-size: 2.5rem;
+}
+
+.card_desc_boxes p {
+    font-size: 1.8rem;
+    padding: 1rem 0.5rem;
+    font-weight: 700;
+}
