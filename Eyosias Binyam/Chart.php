@@ -1,27 +1,41 @@
 <?php
 include 'database.php';
 
-$query = "SELECT DATE_FORMAT(Tr_Date, '%d') AS Tr_Date, Tr_Amount FROM Lessee_Finance WHERE lessee_id = 2234";
+// Fetch data for Paid Amount chart (Tr_Type = 'Deposit')
+$queryPaid = "SELECT DATE_FORMAT(Tr_Date, '%d') AS Tr_Date, Tr_Amount FROM Lessee_Finance WHERE lessee_id = 2234 AND Tr_Type = 'Deposit'";
+$resultPaid = mysqli_query($conn, $queryPaid);
 
-// Execute the query
-$result = mysqli_query($conn, $query);
+// Fetch data for Pending Amount chart (Tr_Type = 'Withdraw')
+$queryPending = "SELECT DATE_FORMAT(Tr_Date, '%d') AS Tr_Date, Tr_Amount FROM Lessee_Finance WHERE lessee_id = 2234 AND Tr_Type = 'Withdraw'";
+$resultPending = mysqli_query($conn, $queryPending);
 
-// Fetch the data into arrays
-$dates = array();
-$amounts = array();
-while ($row = mysqli_fetch_assoc($result)) {
-  $dates[] = $row['Tr_Date'];
-  $amounts[] = $row['Tr_Amount'];
+// Fetch data for Paid Amount chart into arrays
+$datesPaid = array();
+$amountsPaid = array();
+while ($rowPaid = mysqli_fetch_assoc($resultPaid)) {
+  $datesPaid[] = $rowPaid['Tr_Date'];
+  $amountsPaid[] = $rowPaid['Tr_Amount'];
 }
+
+// Fetch data for Pending Amount chart into arrays
+$datesPending = array();
+$amountsPending = array();
+while ($rowPending = mysqli_fetch_assoc($resultPending)) {
+  $datesPending[] = $rowPending['Tr_Date'];
+  $amountsPending[] = $rowPending['Tr_Amount'];
+}
+
 $conn->close();
 ?>
 
-
 <script>
-  // Data for the bar graph
-const dates = <?php echo '[' . implode(',', $dates) . ']'; ?>;
-const amounts = <?php echo '[' . implode(',', $amounts) . ']'; ?>;
+  // Data for the Paid Amount chart
+  const datesPaid = <?php echo '[' . implode(',', $datesPaid) . ']'; ?>;
+  const amountsPaid = <?php echo '[' . implode(',', $amountsPaid) . ']'; ?>;
 
+  // Data for the Pending Amount chart
+  const datesPending = <?php echo '[' . implode(',', $datesPending) . ']'; ?>;
+  const amountsPending = <?php echo '[' . implode(',', $amountsPending) . ']'; ?>;
 
   // Get the canvas elements
   const paidChartCanvas = document.getElementById('paid-chart');
@@ -30,10 +44,10 @@ const amounts = <?php echo '[' . implode(',', $amounts) . ']'; ?>;
   const paidChart = new Chart(paidChartCanvas, {
     type: 'bar',
     data: {
-      labels: dates,
+      labels: datesPaid,
       datasets: [{
         label: 'Paid Amount',
-        data: amounts,
+        data: amountsPaid,
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1
@@ -48,14 +62,13 @@ const amounts = <?php echo '[' . implode(',', $amounts) . ']'; ?>;
     }
   });
 
-  // Create the bar graph for pending amounts
   const pendingChart = new Chart(pendingChartCanvas, {
     type: 'bar',
     data: {
-      labels: dates,
+      labels: datesPending,
       datasets: [{
         label: 'Pending Amount',
-        data: amounts,
+        data: amountsPending,
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1

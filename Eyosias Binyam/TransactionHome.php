@@ -184,14 +184,14 @@ $conn->close();
         <div class="graph-container">
           <canvas id="paid-chart"></canvas>
         </div>
-        <p class="paid">Paid</p>
+        <p class="paid">Deposited</p>
         <p class="PaidMoney" id="paid-amount"></p>
       </div>
       <div class="Money">
         <div class="graph-container">
           <canvas id="pending-chart"></canvas>
         </div>
-        <p class="pending">Pending</p>
+        <p class="pending">Withdrawed</p>
         <p class="PendingMoney" id="pending-amount"></p>
       </div>
       
