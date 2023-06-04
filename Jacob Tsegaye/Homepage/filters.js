@@ -246,13 +246,9 @@ apply_a.addEventListener("click", () => {
                 genCardReset();
             }
             dataindex = new Array();
-            console.log("DEBUG:  sedan check");
             for(var j = 0; j < cardDataCollection.length; j++) {
-                console.log("DEBUG:  in first loop");
-                if(cardDataCollection[j].getType() === '2') {
-                    console.log(`DEBUG: card data ${j} contains 2 bags`);
+                if(cardDataCollection[j].getModel() === 'Sedan') {
                     dataindex[++index] = j;
-                    console.log(`DEBUG:  dataindex set to ${j} at index ${index}`);
                 }
             }
             render(dataindex);
@@ -263,13 +259,9 @@ apply_a.addEventListener("click", () => {
                 genCardReset();
             }
             dataindex = new Array();
-            console.log("DEBUG:  sedan check");
             for(var j = 0; j < cardDataCollection.length; j++) {
-                console.log("DEBUG:  in first loop");
-                if(cardDataCollection[j].getType() === '3') {
-                    console.log(`DEBUG: card data ${j} contains 3 bags`);
+                if(cardDataCollection[j].getModel() === 'SUV') {
                     dataindex[++index] = j;
-                    console.log(`DEBUG:  dataindex set to ${j} at index ${index}`);
                 }
             }
             render(dataindex);
@@ -280,13 +272,9 @@ apply_a.addEventListener("click", () => {
                 genCardReset();
             }
             dataindex = new Array();
-            console.log("DEBUG:  sedan check");
             for(var j = 0; j < cardDataCollection.length; j++) {
-                console.log("DEBUG:  in first loop");
-                if(cardDataCollection[j].getType() === '4') {
-                    console.log(`DEBUG: card data ${j} contains 4 bags`);
+                if(cardDataCollection[j].getModel() === 'Suburban') {
                     dataindex[++index] = j;
-                    console.log(`DEBUG:  dataindex set to ${j} at index ${index}`);
                 }
             }
             render(dataindex);
@@ -297,13 +285,9 @@ apply_a.addEventListener("click", () => {
                 genCardReset();
             }
             dataindex = new Array();
-            console.log("DEBUG:  sedan check");
             for(var j = 0; j < cardDataCollection.length; j++) {
-                console.log("DEBUG:  in first loop");
-                if(cardDataCollection[j].getType() === '5') {
-                    console.log(`DEBUG: card data ${j} contains 5 bags`);
+                if(cardDataCollection[j].getModel() === 'Van') {
                     dataindex[++index] = j;
-                    console.log(`DEBUG:  dataindex set to ${j} at index ${index}`);
                 }
             }
             render(dataindex);

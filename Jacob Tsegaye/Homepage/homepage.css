@@ -9,6 +9,10 @@
     max-height: 10rem;
 }
 
+.hidden {
+    display: none;
+}
+
 span {
     display: block;
 }

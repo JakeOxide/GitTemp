@@ -30,31 +30,22 @@
     color: white;
 }
 
-
-.btn_special {
-    font-size: 1.8rem;
-    font-weight: 700;
-    padding: 0 0;
-    margin: 0;
-    border-radius: 4.5rem;
-    background-image: none;
-    transition: all 500ms ease;
-    transition-delay: 100ms;
-    background-color: dodgerblue;
-    color: white;
-}
-
-.btn_special {
-    background-color: red;
-    color: white;
-}
-
 .input_box {
     margin: 1rem 0;
     padding: 0.5rem;
     font-size: 1.8rem;
     border: 0.1rem solid dodgerblue;
     box-shadow: 0rem 0rem 0.8rem dodgerblue;
+    letter-spacing: 0.15rem;
+    line-height: 2.8rem;
+    border-radius: 1rem;
+}
+
+.input_box_noBorder {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border: none;
     letter-spacing: 0.15rem;
     line-height: 2.8rem;
     border-radius: 1rem;
