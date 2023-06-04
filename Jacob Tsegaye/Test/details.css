@@ -1,0 +1,37 @@
+
+
+
+.images {
+    grid-area: images;
+    border: 1px solid red;
+}
+
+.edit {
+    grid-area: edit;
+    border: 1px solid blue;
+}
+
+.notif {
+    grid-area: notif;
+    border: 1px solid green;
+}
+
+
+.detailsWrapper {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: 1fr 8fr;
+    grid-template-areas: 
+    'images images'
+    'edit notif'
+    ;
+    height: 98vh;
+    margin-left: 25px;
+}
+
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}

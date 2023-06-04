@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Sign up form</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div class="signup">
+            <img src="logo.webp" class="slogo" >
+            <h1>Sign Up Here</h1>
+             <form action="signup.php" method="post">
+                 <label for="fname">First name</label>
+                 <input name="fname"   type="text" placeholder="First Name" required autofocus minlength="5" maxlength="20">
+                 <label for="lname">Last name</label>
+                 <input name="lname" type="text" placeholder="Last Name" required  minlength="5" maxlength="20">
+              
+                     <label for="email">Email</label>
+                     <input name="email" type="email" placeholder="Email"  minlength="5" maxlength="20">
+                     <label for="password">Password</label>
+                     <input name="passowrd" type="password" placeholder="password" required  minlength="5" maxlength="20">
+                 <input type="submit" name="send" id="send" value="Sign Up">
+                 <a href="login.html">Already have an account?</a>
+             </form>
+        </div>
+    </body>
+</html>

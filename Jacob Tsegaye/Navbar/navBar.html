@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar</title>
+    <link rel="stylesheet" href="page.css" />
+    <link rel="stylesheet" href="navBar.css" />
+  </head>
+  <body>
+    <div class="contentWrapper">
+      <header class="main_header">
+        <div class="hmenu" id="hmenu">
+          <div class="barOne bar"></div>
+          <div class="barTwo bar"></div>
+          <div class="barThree bar"></div>
+        </div>
+        <p class="autoOasis">
+          <a href="#" class="autoLink">Auto Oasis</a>
+        </p>
+        <nav class="navBar_links" id="navLinks">
+          <a href="#">link1</a>
+          <a href="#">link2</a>
+          <a href="#">link3</a>
+          <a href="#">link4</a>
+          <a href="#">link5</a>
+        </nav>
+      </header>
+    </div>
+  </body>
+  <script>
+    const navBtn = document.getElementById("hmenu");
+    const navList = document.getElementById("navLinks");
+    navBtn.addEventListener("click", () => {
+      navList.classList.toggle("list_activate");
+      navBtn.classList.toggle("btn_Change");
+    });
+  </script>
+</html>
