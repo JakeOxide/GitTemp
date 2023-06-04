@@ -145,14 +145,14 @@
             $username="root";
             $password="";
             $host="localhost";
-            $database="cardload_test";
+            $database="eazyoasis";
 
             $connection = mysqli_connect($host, $username, $password, $database);
             /* "SELECT img1, seat, bag, gsm, mileage, FROM usermaster WHERE User_name='$Username'" */
 
                   /* "SELECT `id`, `img1`, `seat`, `bag`, `gsm`, `mileage` FROM `data`;"; */
             $counter = -1;
-            $sql = "SELECT `id`, `img1`, `seat`, `bag`, `gsm`, `mileage` FROM `data`;";
+            $sql = "SELECT `id`, `img1`, `seat`, `model`, `gsm`, `mileage` FROM `cars`;";
             $result = mysqli_query($connection, $sql) or die (mysqli_error($connection));
             while ($row = $result->fetch_assoc()){
               $counter++;
@@ -161,20 +161,23 @@
                   
                       data-img="<?php echo base64_encode($row ['img1']); ?>" 
                       data-seat="<?php echo $row ['seat']; ?>" 
-                      data-bag="<?php echo $row ['bag']; ?>" 
+                      data-model="<?php echo $row ['model']; ?>" 
                       data-gsm="<?php echo $row ['gsm']; ?>" 
                       data-mileage="<?php echo $row ['mileage']; ?>" 
                       data-id="<?php echo $row ['id']; ?>"
                       >      
                   <script>
                       dataElement = document.getElementsByClassName('dataCollection')[<?php echo $counter ?>];
-                      card = createCard(dataElement.dataset.img, dataElement.dataset.seat, dataElement.dataset.bag, dataElement.dataset.gsm, dataElement.dataset.mileage, dataElement.dataset.id);
+                      card = createCard(dataElement.dataset.img, dataElement.dataset.seat, dataElement.dataset.model, dataElement.dataset.gsm, dataElement.dataset.mileage, dataElement.dataset.id);
                       cardCollection[++counter] = card;
                   </script>
         <?php
         }
         ?>
         <script>
+          <?php
+          
+           ?>
             cardSectionDyn = document.getElementById('section_cards');
             for(var i = 0; i < cardCollection.length; i++) {
                 cardSectionDyn.appendChild(cardCollection[i]);

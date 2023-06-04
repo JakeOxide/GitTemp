@@ -312,7 +312,7 @@ apply_a.addEventListener("click", () => {
 });
 
 const apply_s = document.getElementById("btn_apply_s");
-apply_s.addEventListener("click", () => {
+apply_s.addEventListener("click", () => { 
 
     console.log(`DEBUG: apply_s `);
 

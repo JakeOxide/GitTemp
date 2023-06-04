@@ -73,7 +73,7 @@ function createCard(imageSource, seat, model, gear, mileage, id) {
         modelIcon.className = "ico";
 
     const modelInfo = document.createElement('p');
-        modelInfo.innerHTML = (model + ' Model');
+        modelInfo.innerHTML = (model);
 
 /* --------------------------------------------------- */
 
@@ -107,6 +107,7 @@ function createCard(imageSource, seat, model, gear, mileage, id) {
         readMore.className = "btn";
         readMore.innerHTML = "View Deal";
         readMore.setAttribute('id', id);
+        readMore.setAttribute('onclick', "alert(`Hello from ${this.getAttribute('id')}`);");
 
 /* --------------------------------------------------- */
     card.appendChild(image);
@@ -114,7 +115,7 @@ function createCard(imageSource, seat, model, gear, mileage, id) {
     descSection.appendChild(seatBox);
     descSection.appendChild(modelBox);
     descSection.appendChild(gearBox);
-    descSection.appendChild(mileBox);
+    descSection.appendChild(mileBox); 
     descSection.appendChild(readMore);
     seatBox.appendChild(seatIcon);
     seatBox.appendChild(seatInfo);
